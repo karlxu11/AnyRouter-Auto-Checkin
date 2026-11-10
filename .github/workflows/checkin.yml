@@ -1,11 +1,8 @@
 name: Ayrouter Daily Check-in
 
 on:
-  workflow_dispatch:
-    inputs:
-      environment:
-        required: false
-        default: main
+  repository_dispatch:
+    types: [cron-trigger]
   # 支持手动触发
   workflow_dispatch:
 
